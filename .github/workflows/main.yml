@@ -26,7 +26,8 @@ jobs:
           pip install pyinstaller
 
       - name: Compiler l'exe
-        run: pyinstaller courrier_v10.spec
+        run: |
+          pyinstaller --onefile --noconsole --name Courrier_SaintMagne courrier_v10.py
 
       - name: Publier l'exe
         uses: actions/upload-artifact@v4
